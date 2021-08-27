@@ -29,7 +29,7 @@ df.loc[df['Issue Type']=='Epic',['Epic Name']]=df['Name'] #includes the name of 
 
 df['Assignee Email']=df['Assignee Email'].str.lower() #changes the email address to lower case as normally jira has them in lower case.
 
-sorted=df.sort_values(by=['Issue Type'])
+sorted=df.sort_values(by=['Issue Type']) #Sorts dataframe to first show epics for stories/subtasks to be created AFTER the epics
 
 sorted.to_csv ('../import_to_jira.csv') #Saves sorted database to CSV file with all epics
 
