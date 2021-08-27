@@ -23,8 +23,6 @@ lengthEpicNames = len (epicNames)
 for i in range(lengthEpicNames):
     df.loc[df['Name']==epicNames[i],['Issue Type']]='Epic' #updates the issue type to epic when epic name matches the ecpicName list
 
-#df.loc[df['Issue Type']=='Epic']
-
 df['Epic Name']='' #creates the epic name column in the df so that the program is able to add the name in the next command
 df.loc[df['Issue Type']=='Epic',['Epic Name']]=df['Name'] #includes the name of the epic when the task has been flagged as epic
 
